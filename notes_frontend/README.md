@@ -1,75 +1,36 @@
-# Nuxt Minimal Starter
+# Notes Frontend (Nuxt 3)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern, minimalistic notes UI with:
+- Create, edit, delete, and list notes
+- Organize by tags and folders
+- Responsive layout with sidebar, header, and footer
+- Light theme using brand colors (primary: `#4f46e5`, secondary: `#8b5cf6`, accent: `#f59e42`)
+- LocalStorage persistence (no backend required)
 
-## Setup
-
-Make sure to install dependencies:
+## Quick Start
 
 ```bash
-# npm
+# install
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# dev
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+# build
 npm run build
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
+# preview
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Structure
+
+- layouts/default.vue — app shell with header, sidebar, footer
+- pages/index.vue — main notes experience
+- components/ — UI building blocks
+- composables/useNotesStore.ts — CRUD and persistence
+
+## Notes
+
+- Data is stored in `localStorage` under the key `notes.app.data.v1`.
+- You can expand to a backend later by swapping the composable with API calls.
